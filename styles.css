@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f7ff;
+    color: #222222;
+}
+
+nav {
+    background-color: #3949ab;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* Updated Hero Section with Apartment Background Image & Dark Overlay */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+}
+
+#hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #f4511e;
+    transform: translateY(-2px);
+}
+
+section {
+    width: 90%;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#about {
+    background-color: #e8eaf6;
+}
+
+#residents {
+    background-color: #e3f2fd;
+}
+
+#maintenance {
+    background-color: #fff3e0;
+}
+
+#notices {
+    background-color: #e8f5e9;
+}
+
+#facilities {
+    background-color: #fce4ec;
+}
+
+#guidelines {
+    background-color: #fff8e1;
+}
+
+h2 {
+    color: #3949ab;
+    text-align: center;
+}
+
+h3 {
+    color: #5e35b1;
+}
+
+ul {
+    line-height: 1.8;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #3949ab;
+    color: white;
+    padding: 12px;
+    border: 1px solid #303f9f;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+}
+
+tr:hover {
+    background-color: #eeeeee;
+}
+
+select,
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #9e9e9e;
+    border-radius: 4px;
+}
+
+input {
+    width: 100%;
+    max-width: 300px;
+}
+
+select {
+    width: 100%;
+    max-width: 300px;
+}
+
+a {
+    color: #3949ab;
+}
+
+#facilities a {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #3949ab;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}

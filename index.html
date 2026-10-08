@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Residential Community Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="#residents">Residents</a>
+    <a href="#maintenance">Maintenance</a>
+    <a href="#notices">Notices</a>
+    <a href="#facilities">Facilities</a>
+</nav>
+
+
+<header id="hero">
+
+    <h1>Residential Community Management</h1>
+
+    <p>
+        Manage residents, maintenance requests, notices and community facilities
+        in one place.
+    </p>
+
+    <a href="#residents">
+        <button>View Residents</button>
+    </a>
+
+    <a href="#maintenance">
+        <button>Submit Maintenance Request</button>
+    </a>
+
+</header>
+
+
+<!-- ABOUT COMMUNITY -->
+
+<section id="about">
+
+    <h2>Community Features</h2>
+
+    <ul>
+        <li>Resident Management</li>
+        <li>Maintenance Request Management</li>
+        <li>Community Notices</li>
+        <li>Facility Booking</li>
+        <li>Community Guidelines</li>
+    </ul>
+
+    <h3>Available Facilities</h3>
+
+    <ul>
+        <li>Swimming Pool</li>
+        <li>Gym</li>
+        <li>Club House</li>
+        <li>Children's Play Area</li>
+        <li>Basketball Court</li>
+        <li>Badminton Court</li>
+        <li>Community Hall</li>
+        <li>Garden</li>
+        <li>Library</li>
+        <li>Party Hall</li>
+    </ul>
+
+</section>
+
+
+<!-- RESIDENTS -->
+
+<section id="residents">
+
+    <h2>Residents</h2>
+
+    <form onsubmit="searchResident(); return false;">
+
+        <input type="text"
+               id="residentSearch"
+               placeholder="Search Resident">
+
+        <button type="submit">Search</button>
+
+    </form>
+
+    <br>
+
+    <table id="residentTable">
+
+        <tr>
+            <th>Resident ID</th>
+            <th>Name</th>
+            <th>Flat Number</th>
+            <th>Phone</th>
+        </tr>
+
+        <tr>
+            <td>R001</td>
+            <td>Sanjeevini</td>
+            <td>A-101</td>
+            <td>9876543210</td>
+        </tr>
+
+        <tr>
+            <td>R002</td>
+            <td>Rahul</td>
+            <td>A-102</td>
+            <td>9876543211</td>
+        </tr>
+
+        <tr>
+            <td>R003</td>
+            <td>Priya</td>
+            <td>A-103</td>
+            <td>9876543212</td>
+        </tr>
+
+        <tr>
+            <td>R004</td>
+            <td>Arjun</td>
+            <td>A-104</td>
+            <td>9876543213</td>
+        </tr>
+
+        <tr>
+            <td>R005</td>
+            <td>Neha</td>
+            <td>A-105</td>
+            <td>9876543214</td>
+        </tr>
+
+        <tr>
+            <td>R006</td>
+            <td>Karan</td>
+            <td>B-201</td>
+            <td>9876543215</td>
+        </tr>
+
+        <tr>
+            <td>R007</td>
+            <td>Ananya</td>
+            <td>B-202</td>
+            <td>9876543216</td>
+        </tr>
+
+        <tr>
+            <td>R008</td>
+            <td>Rohit</td>
+            <td>B-203</td>
+            <td>9876543217</td>
+        </tr>
+
+        <tr>
+            <td>R009</td>
+            <td>Meera</td>
+            <td>B-204</td>
+            <td>9876543218</td>
+        </tr>
+
+        <tr>
+            <td>R010</td>
+            <td>Vikram</td>
+            <td>C-301</td>
+            <td>9876543219</td>
+        </tr>
+
+        <tr>
+            <td>R011</td>
+            <td>Divya</td>
+            <td>C-302</td>
+            <td>9876543220</td>
+        </tr>
+
+        <tr>
+            <td>R012</td>
+            <td>Aditya</td>
+            <td>C-303</td>
+            <td>9876543221</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- MAINTENANCE -->
+
+<section id="maintenance">
+
+    <h2>Maintenance Requests</h2>
+
+    <form id="maintenanceForm"
+          onsubmit="maintenanceRequest(); return false;">
+
+        <label>Resident Name:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <label>Flat Number:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <label>Request Type:</label>
+
+        <select required>
+            <option value="">Select Request Type</option>
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>Cleaning</option>
+            <option>Security</option>
+            <option>Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Description:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <button type="submit">Submit Request</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+
+    <h3>Existing Maintenance Requests</h3>
+
+    <table>
+
+        <tr>
+            <th>Request ID</th>
+            <th>Resident</th>
+            <th>Flat</th>
+            <th>Type</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>M001</td>
+            <td>Rahul</td>
+            <td>A-102</td>
+            <td>Plumbing</td>
+            <td>Completed</td>
+        </tr>
+
+        <tr>
+            <td>M002</td>
+            <td>Priya</td>
+            <td>A-103</td>
+            <td>Electrical</td>
+            <td>Pending</td>
+        </tr>
+
+        <tr>
+            <td>M003</td>
+            <td>Karan</td>
+            <td>B-201</td>
+            <td>Cleaning</td>
+            <td>In Progress</td>
+        </tr>
+
+        <tr>
+            <td>M004</td>
+            <td>Meera</td>
+            <td>B-204</td>
+            <td>Security</td>
+            <td>Pending</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- NOTICES -->
+
+<section id="notices">
+
+    <h2>Community Notices</h2>
+
+    <table>
+
+        <tr>
+            <th>Notice ID</th>
+            <th>Notice</th>
+            <th>Date</th>
+        </tr>
+
+        <tr>
+            <td>N001</td>
+            <td>Water supply maintenance</td>
+            <td>10 Oct 2026</td>
+        </tr>
+
+        <tr>
+            <td>N002</td>
+            <td>Community meeting</td>
+            <td>12 Oct 2026</td>
+        </tr>
+
+        <tr>
+            <td>N003</td>
+            <td>Parking area cleaning</td>
+            <td>15 Oct 2026</td>
+        </tr>
+
+        <tr>
+            <td>N004</td>
+            <td>Festival celebration</td>
+            <td>20 Oct 2026</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- FACILITIES -->
+
+<section id="facilities">
+
+    <h2>Community Facilities</h2>
+
+    <table>
+
+        <tr>
+            <th>Facility ID</th>
+            <th>Facility</th>
+            <th>Availability</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>F001</td>
+            <td>Swimming Pool</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F002</td>
+            <td>Gym</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F003</td>
+            <td>Club House</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F004</td>
+            <td>Children's Play Area</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F005</td>
+            <td>Basketball Court</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F006</td>
+            <td>Badminton Court</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F007</td>
+            <td>Community Hall</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F008</td>
+            <td>Garden</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F009</td>
+            <td>Library</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+        <tr>
+            <td>F010</td>
+            <td>Party Hall</td>
+            <td>Available</td>
+            <td><a href="#booking">Book</a></td>
+        </tr>
+
+    </table>
+
+
+    <!-- FACILITY BOOKING -->
+
+    <h3 id="booking">Facility Booking</h3>
+
+    <form id="bookingForm"
+          onsubmit="bookFacility(); return false;">
+
+        <label>Facility:</label>
+
+        <select required>
+            <option value="">Select Facility</option>
+            <option>Swimming Pool</option>
+            <option>Gym</option>
+            <option>Club House</option>
+            <option>Children's Play Area</option>
+            <option>Basketball Court</option>
+            <option>Badminton Court</option>
+            <option>Community Hall</option>
+            <option>Garden</option>
+            <option>Library</option>
+            <option>Party Hall</option>
+        </select>
+
+        <br><br>
+
+        <label>Resident Name:</label>
+        <input type="text" required>
+
+        <br><br>
+
+        <label>Date:</label>
+        <input type="date" required>
+
+        <br><br>
+
+        <label>Time:</label>
+        <input type="time" required>
+
+        <br><br>
+
+        <button type="submit">Book Facility</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+</section>
+
+
+<!-- GUIDELINES -->
+
+<section id="guidelines">
+
+    <h2>Community Guidelines</h2>
+
+    <table>
+
+        <tr>
+            <th>Rule</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Maintain cleanliness in common areas.</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Follow community parking rules.</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Keep noise levels low after 10 PM.</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Use community facilities responsibly.</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<footer>
+
+    <p>Residential Community Management System</p>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
